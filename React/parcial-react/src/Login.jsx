@@ -1,4 +1,5 @@
 import React from 'react';
+import { useState } from 'react';
 import './Login.css';
 import wifiIcon from './assets/wifi.png';
 import signalIcon from './assets/signal.png';
@@ -6,6 +7,17 @@ import batteryIcon from './assets/battery.png';
 import userIcon from './assets/user.png';
 
 export function Login() {
+    const [username, setUsername] = useState('');
+    const [password, setPassword] = useState('');
+    const [rememberMe, setRememberMe] = useState(false);
+
+
+    const handleClick = () => {
+        console.log('Username:', username);
+        console.log('Password:', password);
+        console.log('Remember me:', rememberMe ? 'Yes' : 'No');
+    };
+
     return (
         <section className='login'>
             <div className="status-bar">
@@ -31,12 +43,12 @@ export function Login() {
                 </div>
             </div>
             <div className="login-container">
-                <div class="background">
+                <div className="background">
                     <div 
-                        class="circle circle1">
+                        className="circle circle1">
                     </div>
                     <div
-                        class="circle circle2">
+                        className="circle circle2">
                     </div>
                 </div>
                 <div 
@@ -46,15 +58,32 @@ export function Login() {
                     />
                 </div>
                 <div className='login-container-inputs'>
-                    <input type="text" placeholder='Username' />
-                    <input type="password" placeholder='Password' />
+                    <input 
+                        type="text" 
+                        placeholder='Username' 
+                        value={username}
+                        onChange={(e) => setUsername(e.target.value)}
+                    />
+                    <input type="password" 
+                        placeholder='Password' 
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
                 </div>
                 <div 
                     className='login-container-rememberme'>
-                    <input type="checkbox" id="remember-me" />
-                    <label htmlFor="remember-me">Remember me</label>
+                    <input 
+                        type="checkbox" 
+                        id="remember-me" 
+                        checked={rememberMe}
+                        onChange={(e) => setRememberMe(e.target.checked)}
+                    />
+                    <label 
+                        htmlFor="remember-me">
+                        Remember me
+                    </label>
                 </div>
-                <div className='login-container-signin-button'>
+                <div className='login-container-signin-button' onClick={handleClick}>
                 <button 
                     className='login-signin-button'>Sign In
                 </button>

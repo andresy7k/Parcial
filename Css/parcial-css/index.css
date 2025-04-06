@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+
+  background-color: #FFEA35;
+}
+
+/* Contenedor principal con flexbox */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px;
+  height: 100vh;
+  position: absolute;
+}
+
+/* Estilos base de las cajas */
+.box {
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  align-items: center;
+  font-weight: bold;
+  width: 150px;
+  height: 150px;
+  
+}
+
+
+.box-1 {
+  background-color: #E117FF;
+  width: 150px;
+  height: 690px;
+  margin-top: 05px;
+  margin-left: 0px;
+}
+
+.box-2 {
+  display: flex;              
+  justify-content: start; 
+  align-items: start;   
+  position: relative;       
+  overflow: hidden; 
+  background-color: #FF810A;
+  margin-top: 90px;
+  width: 300px;
+  height: 125px;
+  margin-left: 15%;
+}
+
+.box-2-child {  
+  background-color: #FFBA7D;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  
+}
+
+
+.box-3 {
+  display: flex;             
+  justify-content: center;  
+  align-items: center; 
+  position: relative;       
+  overflow: hidden;  
+  background-color: #FF810A;
+  width: 300px;
+  height: 125px;
+  margin-top: 90px;
+  margin-left: 10%;
+}
+
+.box-3-child {
+  background-color: #FFBA7D;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+}
+
+
+.box-4 {
+  display: flex;              /* activa flexbox */
+  justify-content: end;  
+  align-items: end; /* centra horizontalmente */
+  position: absolute;        /* necesario si usás absolute adentro */
+  overflow: hidden; 
+  background-color: #FF810A;
+  width: 300px;
+  height: 125px;
+  margin-top: 90px;
+  margin-left: 73%;
+}
+
+.box-4-child {
+  background-color: #FFBA7D;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+
+}
+
+.box-5 {
+  background-color: #1D2261;
+  width: 83em;
+  height: 100px;
+  margin-top: 300px;
+  margin-left: 150px;
+}
+
+.box-6 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FE0B81;
+  width: 500px; 
+  height: 125px;
+  margin-top: 200px;
+  margin-left: 300px;
+  margin-right: auto; 
+  border: none;
+}
+
+.box-child {
+  background-color: #FE7CB9;
+  width: 100px;
+  height: 50px;
+  display: flex;  
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+
+.box-7 {
+  background-color: #FE0B81;
+  width: 500px;
+  height: 125px;
+  margin-top: 500px;
+  margin-left: 58%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-7-child {
+  height: 20px;
+  width: 100vw;
+  background-color: #FE7CB9;
+  padding: 10 px 5px;
+}
